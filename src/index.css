@@ -11,3 +11,159 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  padding: 0 1rem;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.card-image .free {
+  position: absolute;
+  margin: 0;
+  top: 0.15rem;
+  right: 0.5rem;
+}
+
+.card-type {
+  text-align: end;
+}
+
+.card-type span {
+  vertical-align: super;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-action .price {
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem;
+}
+
+
+@media (min-width: 767px) {
+  .cart {
+    top: 5rem;
+    bottom: unset;
+
+  }
+}
+
+.collection{
+  margin: 0;
+}
+
+.basket-list .collection .basket-item {
+  margin: 1rem;
+}
+
+.basket-list .collection .collection-header {
+  padding: 1rem;
+  margin: 0;
+}
+
+.basket-list .collection .collection-footer {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.basket-list .basket-item-quantity {
+  vertical-align: super;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.basket-list .collection-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.collection .collection-item.avatar {
+  min-height: 70px;
+}
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  background-color: #fff;
+  width: 50rem;
+  max-width: 95%;
+  -webkit-box-shadow: 7px 7px 15px 5px rgba(69, 90, 100, 0.7);
+  -moz-box-shadow: 7px 7px 15px 5px rgba(69, 90, 100, 0.7);
+  box-shadow: 7px 7px 15px 5px rgba(69, 90, 100, 0.7);
+
+  animation: show 500ms ease-in-out;
+
+}
+
+.basket-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #fff;
+}
+.basket-close i{
+  font-size: 3rem;
+}
+.basket-item-minus,.basket-item-plus,.basket-close i, .basket-delete{
+  cursor: pointer;
+}
+
+@keyframes show {
+  from{
+    top:70%;
+    opacity: 0;
+  }
+  to{
+    top:50%;
+    opacity: 1;
+  }
+}
+#toast-container{
+  top: 2.5rem !important;
+  animation: fadeIn 250ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
