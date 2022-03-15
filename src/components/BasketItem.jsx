@@ -1,5 +1,11 @@
+import {useContext} from "react"
+import {ShopContext} from "../context"
+
 function BasketItem(props) {
-    const { id, title, price, image, quantity, removeFromBasket, plusBasketItem, minusBasketItem } = props
+
+    const {removeFromBasket, plusBasketItem, minusBasketItem} = useContext(ShopContext)
+
+    const { id, title, price, image, quantity } = props
 
     return <div className="basket-item hoverable row">
         <li className="collection-item avatar">
